@@ -1,0 +1,23 @@
+{
+	"name": "dynatron/lbstat",
+	"type": "library",
+	"description": "Dynatron Loadbalancer Stats",
+	"keywords": ["dynatron", "lbstats", "loadbalancer", "haproxy", "mrcore"],
+	"homepage": "http://github.com/dynatron/lbstat",
+	"license": "Private",
+	"support": {
+		"issues": "https://github.com/dynatron/lbstat/issues"
+	},
+	"authors": [
+		{
+			"name": "John Plata",
+			"email": "jplata@dynatronsoftware.com",
+			"homepage": "https://dynatronsoftware.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Dynatron\\Lbstat\\": ""
+		}
+	}
+}
