@@ -1,0 +1,2 @@
+# lbstat
+Haproxy Loadbalancer Stats
