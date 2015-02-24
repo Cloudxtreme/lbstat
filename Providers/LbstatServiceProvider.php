@@ -1,7 +1,8 @@
 <?php namespace Dynatron\Lbstat\Providers;
 
 use Module;
-use Mrcore\Modules\Foundation\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
+#use Mrcore\Modules\Foundation\Support\ServiceProvider;
 
 class LbstatServiceProvider extends ServiceProvider {
 
@@ -21,10 +22,6 @@ class LbstatServiceProvider extends ServiceProvider {
 	{
 		// Mrcore Module Tracking
 		Module::trace(get_class(), __function__);
-
-		// Register our Artisan Commands
-		$this->commands('Dynatron\Lbstat\Console\Commands\LogParser');
-
 	}
 
 	/**
@@ -41,6 +38,8 @@ class LbstatServiceProvider extends ServiceProvider {
 		
 		$this->app->bind('Dynatron\Lbstat\Repositories\LbstatRepositoryInterface', 'Dynatron\Lbstat\Repositories\MssqlLbstatRepository');
 
+		// Register our Artisan Commands
+		$this->commands('Dynatron\Lbstat\Console\Commands\LogParser');
 	}
 
 	/**
