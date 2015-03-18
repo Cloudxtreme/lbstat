@@ -3,7 +3,7 @@
 use Mssql;
 use Mreschke\Helpers\Console;
 use Illuminate\Console\Command;
-use Mreschke\Dbal\DbalInterface;
+use Mreschke\Dbal\Mssql as DbalInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 

@@ -1,6 +1,6 @@
 <?php namespace Dynatron\Lbstat\Repositories;
 
-use Mreschke\Dbal\DbalInterface;
+use Mreschke\Dbal\Mssql as DbalInterface;
 
 class MssqlLbstatRepository implements LbstatRepositoryInterface
 {

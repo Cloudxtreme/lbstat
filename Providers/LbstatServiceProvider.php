@@ -34,9 +34,8 @@ class LbstatServiceProvider extends ServiceProvider {
 		// Mrcore Module Tracking
 		Module::trace(get_class(), __function__);
 
-		#$this->app->bind('Mreschke\Dbal\DbalInterface', 'Mreschke\Dbal\Mssql');
-		
-		$this->app->bind('Dynatron\Lbstat\Repositories\LbstatRepositoryInterface', 'Dynatron\Lbstat\Repositories\MssqlLbstatRepository');
+		// Bind Alias
+		$this->app->alias('Dynatron\Lbstat\Repositories\MssqlLbstatRepository', 'Dynatron\Lbstat\Repositories\LbstatRepositoryInterface');
 
 		// Register our Artisan Commands
 		$this->commands('Dynatron\Lbstat\Console\Commands\LogParser');
@@ -49,9 +48,7 @@ class LbstatServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array(
-			'Dynatron\Lbstat\Repositories\LbstatRepositoryInterface',
-		);
+		return array('Dynatron\Lbstat\Repositories\MssqlLbstatRepository');
 	}
 
 }
